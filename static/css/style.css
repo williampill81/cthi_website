@@ -1145,53 +1145,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent-color);
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-@keyframes subtleFloat {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-.hero-content,
-.section-header,
-.card,
-.program-card,
-.activity-card,
-.category-card {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-/* Add subtle personality touches */
-.activity-card:hover .activity-icon {
-    animation: subtleFloat 2s ease-in-out infinite;
-}
-
-.category-card:hover .category-icon {
-    animation: subtleFloat 2s ease-in-out infinite;
-}
-
-/* More natural spacing variations */
-.activity-card:nth-child(odd) {
-    transform: translateY(-2px);
-}
-
-.activity-card:nth-child(even) {
-    transform: translateY(2px);
-}
 
 /* Prevent layout shifts during language switching */
 .page-header h1,
