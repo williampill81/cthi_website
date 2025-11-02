@@ -83,6 +83,17 @@ const languageContent = {
             healthCards: 'Health Education Cards',
             contact: 'Contact'
         },
+        dropdown: {
+            cancer: 'Cancer',
+            cardiovascular: 'Cardiovascular',
+            'chronic-illness': 'Chronic Illness',
+            dental: 'Dental Health',
+            infections: 'Infections & Virus',
+            'mental-health': 'Mental Health',
+            preventative: 'Preventative Care',
+            respiratory: 'Respiratory Health',
+            'sexual-health': 'Sexual Health'
+        },
         toggle: '中文',
         content: {
             heroTitle: 'CHINATOWN HEALTH INITIATIVE',
@@ -150,6 +161,17 @@ const languageContent = {
             team: '認識團隊',
             healthCards: '健康教育卡片',
             contact: '聯絡我們'
+        },
+        dropdown: {
+            cancer: '癌症',
+            cardiovascular: '心血管',
+            'chronic-illness': '慢性病',
+            dental: '牙科健康',
+            infections: '感染與病毒',
+            'mental-health': '心理健康',
+            preventative: '預防保健',
+            respiratory: '呼吸系統健康',
+            'sexual-health': '性健康'
         },
         toggle: 'English',
         content: {
@@ -236,6 +258,16 @@ function updateLanguageContent(lang) {
             link.textContent = content.nav.healthCards;
         } else if (href === '/contact') {
             link.textContent = content.nav.contact;
+        }
+    });
+    
+    // Update dropdown menu items
+    const dropdownItems = document.querySelectorAll('[data-dropdown-item]');
+    dropdownItems.forEach(item => {
+        const categoryId = item.getAttribute('data-dropdown-item');
+        const dropdownContent = languageContent[lang].dropdown;
+        if (dropdownContent && dropdownContent[categoryId]) {
+            item.textContent = dropdownContent[categoryId];
         }
     });
     
