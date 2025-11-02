@@ -180,7 +180,7 @@ const languageContent = {
             aboutTitle: '關於我們',
             whatWeDoTitle: '我們的工作',
             resourcesTitle: '我們的資源',
-            contactTitle: '聯繫我們',
+            contactTitle: '聯絡我們',
             aboutText: '我們是一群充滿熱情的西北大學學生，相信醫療保健應該對我們社區中的每個人都開放。自2019年以來，我們一直與唐人街居民直接合作，打破語言障礙，將家庭與他們最需要的健康資源聯繫起來。',
             meetTeamBtn: '認識我們的團隊',
             heroMeetTeamBtn: '認識我們的團隊',
