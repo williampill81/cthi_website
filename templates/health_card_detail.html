@@ -27,7 +27,22 @@
                 <div class="resource-item">
                     <h3>Educational Materials</h3>
                     <p>Downloadable information cards and brochures about {{ category.name|lower }}.</p>
+                    {% if resources %}
+                    <ul class="resource-download-list">
+                        {% for resource in resources %}
+                        <li>
+                            <a href="{{ url_for('static', filename=resource.path) }}" class="resource-link" target="_blank" rel="noopener">
+                                <span class="resource-title">{{ resource.title }}</span>
+                                {% if resource.language_label_en %}
+                                <span class="resource-language">{{ resource.language_label_en }}</span>
+                                {% endif %}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
                     <p class="coming-soon">Resources coming soon - currently being compiled</p>
+                    {% endif %}
                 </div>
                 
                 <div class="resource-item">

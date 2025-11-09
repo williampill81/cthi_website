@@ -27,7 +27,22 @@
                 <div class="resource-item">
                     <h3>教育材料</h3>
                     <p>可下載的關於{{ category.name_zh }}的資訊卡片和小冊子。</p>
+                    {% if resources %}
+                    <ul class="resource-download-list">
+                        {% for resource in resources %}
+                        <li>
+                            <a href="{{ url_for('static', filename=resource.path) }}" class="resource-link" target="_blank" rel="noopener">
+                                <span class="resource-title">{{ resource.title }}</span>
+                                {% if resource.language_label_zh %}
+                                <span class="resource-language">{{ resource.language_label_zh }}</span>
+                                {% endif %}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
                     <p class="coming-soon">資源即將推出 - 目前正在匯編中</p>
+                    {% endif %}
                 </div>
                 
                 <div class="resource-item">
