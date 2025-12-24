@@ -981,52 +981,86 @@ h1, h2, h3, h4, h5, h6 {
     
     /* Mobile committee sections */
     .committee-section {
-        margin: 3rem 0;
-        padding: 2rem 0;
+        margin: 2.5rem 0;
+        padding: 1.5rem 0;
+    }
+    
+    .committee-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
     }
     
     .committee-year {
-        font-size: 1rem;
-        margin-bottom: 2rem;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
     }
     
     /* Mobile member profiles - ensure proper spacing */
     .member-profiles {
         gap: 1.5rem;
+        grid-template-columns: 1fr !important;
     }
     
     .member-profile {
-        padding: 1.25rem;
-        gap: 1.25rem;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 1.5rem !important;
+        gap: 1.25rem !important;
+        text-align: center;
     }
     
     .member-photo {
-        flex: 0 0 100%;
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        max-width: 250px !important;
+        aspect-ratio: 1 !important;
+        margin: 0 auto !important;
+    }
+    
+    .member-photo img {
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: none !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+    /* Disable all custom photo transforms on mobile */
+    .member-photo img.tok-lin-photo,
+    .member-photo img.anna-photo,
+    .member-photo img.johnny-photo,
+    .member-photo img.william-photo,
+    .member-photo img.lindsay-photo {
+        transform: none !important;
+        object-position: center center !important;
     }
     
     .member-info {
-        flex: 0 0 100%;
-        width: 100%;
+        flex: 0 0 auto !important;
+        width: 100% !important;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .member-info .member-role {
         font-size: 0.9rem;
+        margin-bottom: 0.25rem;
     }
     
     .member-info .member-name {
-        font-size: 1.35rem;
-        margin: 0.25rem 0;
+        font-size: 1.4rem;
+        margin: 0.25rem 0 0.75rem 0;
+        text-align: center;
     }
     
     .member-info .member-description {
         font-size: 0.9rem;
-        line-height: 1.6;
+        line-height: 1.65;
         text-align: left;
-        margin-top: 0.75rem;
+        margin-top: 0;
+        width: 100%;
     }
     
     /* Mobile contact form */
@@ -1561,32 +1595,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-@media (max-width: 768px) {
-    .committee-title {
-        font-size: 2rem;
-    }
-    
-    .member-profile {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1.5rem;
-    }
-    
-    .member-photo {
-        flex: 0 0 100%;
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    .member-info {
-        text-align: left;
-    }
-    
-    .member-info .member-name {
-        font-size: 1.5rem;
-    }
-}
 
 /* Health Categories Grid */
 .intro-text {
