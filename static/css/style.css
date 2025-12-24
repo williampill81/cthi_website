@@ -794,7 +794,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 2.5rem;
     width: 100%;
 }
@@ -805,9 +805,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .activity-media {
-    flex: 0 0 320px;
-    max-width: 340px;
-    height: 220px;
+    flex: 0 0 45%;
+    max-width: 560px;
+    height: auto;
     border-radius: 16px;
     background: var(--bg-light);
     display: flex;
@@ -828,24 +828,82 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .activity-content {
-    flex: 1;
+    flex: 0 0 55%;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    padding-right: 2rem;
 }
 
 .activity-card h3 {
     font-family: 'Source Serif Pro', 'Times New Roman', serif;
     color: var(--primary-color);
     margin-bottom: 0.25rem;
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 700;
     letter-spacing: 0.01em;
 }
 
 .activity-card p {
     color: var(--text-light);
-    line-height: 1.7;
+    font-size: 1.1rem;
+    line-height: 1.85;
+}
+
+.activity-details {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.activity-stat {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.35rem;
+    background: rgba(196, 0, 60, 0.08);
+    border-radius: 14px;
+    border: 1px solid rgba(196, 0, 60, 0.18);
+}
+
+.activity-stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    line-height: 1;
+}
+
+.activity-stat-label {
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 0.01em;
+}
+
+.activity-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.activity-cta::after {
+    content: '→';
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.activity-cta:hover {
+    color: var(--highlight-color);
+}
+
+.activity-cta:hover::after {
+    transform: translateX(4px);
 }
 
 @media (max-width: 900px) {
@@ -853,6 +911,7 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         align-items: flex-start;
         padding: 2rem;
+        gap: 1.75rem;
     }
 
     .activity-media {
@@ -866,6 +925,16 @@ h1, h2, h3, h4, h5, h6 {
 
     .activity-icon {
         font-size: 3rem;
+    }
+
+    .activity-details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .activity-content {
+        padding-right: 0;
     }
 }
 
@@ -993,6 +1062,172 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-light);
     line-height: 1.8;
     margin-bottom: 2rem;
+}
+
+/* Committee Sections */
+.committee-section {
+    margin: 4rem 0;
+    padding: 3rem 0;
+}
+
+.committee-title {
+    font-family: 'Source Serif Pro', 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+}
+
+.committee-year {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.member-profiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.member-profile {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.member-profile:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.member-photo {
+    flex: 0 0 45%;
+    width: 45%;
+    aspect-ratio: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-light);
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-photo img.tok-lin-photo {
+    object-position: center 15% !important;
+    transform: scale(1.2);
+}
+
+.member-photo img.anna-photo {
+    transform: scale(1.2);
+}
+
+.member-photo img.johnny-photo {
+    transform: scale(1.2);
+}
+
+.member-photo img.william-photo {
+    object-position: 15% 40% !important;
+    transform: scale(1.15);
+}
+
+
+.member-photo img.lindsay-photo {
+    transform: scale(1.7) translateX(5%) !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+}
+
+.member-photo .member-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.member-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.member-info .member-role {
+    font-family: 'Source Serif Pro', 'Times New Roman', serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--text-light);
+    margin: 0;
+    font-weight: 400;
+}
+
+.member-info .member-name {
+    font-family: 'Source Serif Pro', 'Times New Roman', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+.member-info .member-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin: 0.5rem 0 0 0;
+}
+
+@media (max-width: 1024px) {
+    .member-profiles {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .committee-title {
+        font-size: 2rem;
+    }
+    
+    .member-profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .member-photo {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .member-info {
+        text-align: left;
+    }
+    
+    .member-info .member-name {
+        font-size: 1.5rem;
+    }
 }
 
 /* Health Categories Grid */

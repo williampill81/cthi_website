@@ -107,13 +107,21 @@ const languageContent = {
             heroMeetTeamBtn: 'Meet Our Team',
             heroOurResourcesBtn: 'Our Resources',
             volunteerTitle: 'VOLUNTEER',
-            volunteerText: "Every month, you'll find us at the Chinatown Community Center helping elderly residents fill out insurance forms, or at health fairs translating between doctors and patients. Last year alone, our volunteers logged over 800 hours helping bridge the gap between healthcare providers and our community.",
+            volunteerText: "Partnering with community organizations in Chicago's Chinatown as well as medical schools in the Chicagoland region, we volunteer regularly at community health fairs, health screenings, and health education events to provide resources and translation support. We strive to bridge the gap between healthcare providers and our community.",
+            volunteerStatLabel: 'Volunteer hours logged last year',
+            volunteerCta: 'Contact our volunteer team',
             infoDeskTitle: 'HEALTH INFORMATION DESK',
             infoDeskText: "Stop by the Chinatown Public Library any Tuesday or Thursday afternoon, and you'll find our health information desk staffed by bilingual volunteers. We've helped over 200 families navigate everything from Medicare enrollment to finding a Mandarin-speaking dentist in the area.",
+            infoDeskStatLabel: 'Families guided through health resources',
+            infoDeskCta: 'Browse health resources',
             publicEventsTitle: 'PUBLIC EVENTS',
-            publicEventsText: 'From hosting "Health & Heritage" panels featuring local community leaders to organizing mental health awareness workshops, we create spaces where Northwestern students can learn about health disparities and cultural competency in healthcare.',
+            publicEventsText: 'Through hosting public events, we create spaces where Northwestern students can learn about health disparities and cultural competency in healthcare.',
+            publicEventsStatLabel: 'Community events hosted annually',
+            publicEventsCta: 'See our community impact',
             socialsTitle: 'SOCIALS/FOOD BONDING',
-            socialsText: 'Food brings us together! Whether we\'re selling homemade baozi in the Norris Center to fund our programs, or taking our monthly "Chinatown Food Crawl" to discover the best dim sum spots, we believe that sharing meals builds the strongest communities.',
+            socialsText: 'We love food! Every quarter we hold a fundraiser (scallion pancakes, dumplings, tanghulu) to raise money for our initiatives and social events to foster community within our organization. We also take trips down to Chinatown to eat food and explore the community!',
+            socialsStatLabel: 'Shared meals and outings each year',
+            socialsCta: 'Meet the community',
             viewResourcesBtn: 'View Health Education Cards',
             contactText: 'Want to volunteer with us or have a question about health resources in Chinatown? We\'d love to hear from you! Whether you\'re a Northwestern student looking to get involved or a community member who needs help, don\'t hesitate to reach out.',
             followUsText: 'Follow us on Instagram',
@@ -125,7 +133,7 @@ const languageContent = {
             joinTeamText: "Think you might want to join us? We're always looking for Northwestern students who care about health equity and want to make a real difference in our community. No prior experience needed - just bring your passion and willingness to learn! We meet every Tuesday at 7 PM in Norris.",
             contactTitle: 'Contact Us',
             contactSubtitle: "We'd love to hear from you!",
-            contactDescription: 'Got questions about health resources in Chinatown? Want to volunteer with us? Or maybe you\'re a Northwestern student looking to get involved? We\'re here to help! Drop us a line and we\'ll get back to you within 24 hours.',
+            contactDescription: 'Got questions about health resources in Chinatown? Interested in what we do? Or maybe you\'re a Northwestern student looking to get involved? We\'re here to help! Drop us a line and we\'ll get back to you at our earliest convenience.',
             healthCardsTitle: 'All Health Education Cards',
             healthCardsSubtitle: 'Comprehensive health information resources for the community',
             healthCardsDescription: "We've created these health education materials based on the most common questions we hear from families at our health information desk. Each card is written in simple language, translated by native speakers, and reviewed by healthcare professionals to ensure accuracy.",
@@ -186,13 +194,21 @@ const languageContent = {
             heroMeetTeamBtn: '認識我們的團隊',
             heroOurResourcesBtn: '我們的資源',
             volunteerTitle: '志願服務',
-            volunteerText: '每個月，您都會在唐人街社區中心看到我們幫助老年居民填寫保險表格，或在健康博覽會上在醫生和患者之間進行翻譯。僅去年一年，我們的志願者就記錄了超過800小時的時間，幫助縮小醫療保健提供者與我們社區之間的差距。',
+            volunteerText: '與芝加哥唐人街的社區組織以及芝加哥地區的醫學院合作，我們定期在社區健康博覽會、健康篩查和健康教育活動中提供志願服務，提供資源和翻譯支持。我們努力縮小醫療保健提供者與我們社區之間的差距。',
+            volunteerStatLabel: '志工去年累積的服務時數',
+            volunteerCta: '聯絡我們的志工團隊',
             infoDeskTitle: '健康資訊台',
             infoDeskText: '每週二或週四下午，您都可以在唐人街公共圖書館找到我們的健康資訊台，由雙語志願者提供服務。我們已經幫助了200多個家庭處理從Medicare註冊到在該地區尋找會說中文的牙醫等各種事務。',
+            infoDeskStatLabel: '已協助的家庭獲得健康資源',
+            infoDeskCta: '瀏覽健康資源',
             publicEventsTitle: '公開活動',
-            publicEventsText: '從舉辦以當地社區領袖為特色的「健康與傳統」小組討論會，到組織心理健康意識研討會，我們為西北大學學生創造空間，讓他們了解健康差異和醫療保健中的文化能力。',
+            publicEventsText: '通過舉辦公開活動，我們為西北大學學生創造空間，讓他們了解健康差異和醫療保健中的文化能力。',
+            publicEventsStatLabel: '每年舉辦的社區活動',
+            publicEventsCta: '看看我們的社區影響',
             socialsTitle: '社交/美食聚會',
-            socialsText: '美食把我們聚集在一起！無論我們是在諾里斯中心出售自製包子來為我們的項目籌集資金，還是進行每月一次的「唐人街美食之旅」來發現最好的點心店，我們都相信分享美食能建立最牢固的社區。',
+            socialsText: '我們熱愛美食！每季度我們都會舉辦募款活動（蔥油餅、餃子、糖葫蘆）來為我們的計劃和社交活動籌集資金，以促進組織內的社區建設。我們也會前往唐人街品嚐美食並探索社區！',
+            socialsStatLabel: '每年共享的餐會與外出活動',
+            socialsCta: '認識我們的社群',
             viewResourcesBtn: '查看健康教育卡片',
             contactText: '想與我們一起做志願者，或對唐人街的健康資源有疑問嗎？我們很想聽到您的消息！無論您是正在尋找參與機會的西北大學學生，還是需要幫助的社區成員，請隨時聯繫我們。',
             followUsText: '在Instagram上關注我們',
@@ -204,7 +220,7 @@ const languageContent = {
             joinTeamText: '想加入我們嗎？我們一直在尋找關心健康公平並想在我們社區中產生真正影響的西北大學學生。不需要經驗 - 只需要您的熱情和學習意願！我們每週二晚上7點在諾里斯見面。',
             contactTitle: '聯絡我們',
             contactSubtitle: '我們很想聽到您的消息！',
-            contactDescription: '對唐人街的健康資源有疑問嗎？想與我們一起做志願者嗎？或者您可能是正在尋找參與機會的西北大學學生？我們在這裡提供幫助！給我們留言，我們會在24小時內回覆您。',
+            contactDescription: '對唐人街的健康資源有疑問嗎？對我們的工作感興趣嗎？或者您可能是正在尋找參與機會的西北大學學生？我們在這裡提供幫助！給我們留言，我們會盡快回覆您。',
             healthCardsTitle: '所有健康教育卡片',
             healthCardsSubtitle: '為社區提供全面的健康信息資源',
             healthCardsDescription: '我們根據在健康資訊台聽到的家庭最常見問題創建了這些健康教育材料。每張卡片都用簡單的語言編寫，由母語人士翻譯，並由醫療保健專業人士審查以確保準確性。',
@@ -360,6 +376,47 @@ function updateHomePage(lang) {
         activityTexts[1].textContent = content.infoDeskText;
         activityTexts[2].textContent = content.publicEventsText;
         activityTexts[3].textContent = content.socialsText;
+    }
+    
+    // Update activity stats and links
+    const volunteerStat = document.querySelector('.volunteer-stat-label');
+    if (volunteerStat) {
+        volunteerStat.textContent = content.volunteerStatLabel;
+    }
+    
+    const volunteerCta = document.querySelector('.volunteer-cta');
+    if (volunteerCta) {
+        volunteerCta.textContent = content.volunteerCta;
+    }
+    
+    const infoDeskStat = document.querySelector('.info-desk-stat-label');
+    if (infoDeskStat) {
+        infoDeskStat.textContent = content.infoDeskStatLabel;
+    }
+    
+    const infoDeskCta = document.querySelector('.info-desk-cta');
+    if (infoDeskCta) {
+        infoDeskCta.textContent = content.infoDeskCta;
+    }
+    
+    const publicEventsStat = document.querySelector('.public-events-stat-label');
+    if (publicEventsStat) {
+        publicEventsStat.textContent = content.publicEventsStatLabel;
+    }
+    
+    const publicEventsCta = document.querySelector('.public-events-cta');
+    if (publicEventsCta) {
+        publicEventsCta.textContent = content.publicEventsCta;
+    }
+    
+    const socialsStat = document.querySelector('.socials-stat-label');
+    if (socialsStat) {
+        socialsStat.textContent = content.socialsStatLabel;
+    }
+    
+    const socialsCta = document.querySelector('.socials-cta');
+    if (socialsCta) {
+        socialsCta.textContent = content.socialsCta;
     }
     
     // Update contact section

@@ -37,38 +37,65 @@
         <div class="what-we-do-grid">
             <div class="activity-card">
                 <div class="activity-media">
-                    <span class="activity-icon">🤝</span>
+                    <img src="{{ url_for('static', filename='homepage_pics/Volunteering.jpg') }}" alt="Volunteers helping community members">
                 </div>
                 <div class="activity-content">
                     <h3>VOLUNTEER</h3>
-                    <p>Every month, you'll find us at the Chinatown Community Center helping elderly residents fill out insurance forms, or at health fairs translating between doctors and patients. Last year alone, our volunteers logged over 800 hours helping bridge the gap between healthcare providers and our community.</p>
+                    <p>Partnering with community organizations in Chicago's Chinatown as well as medical schools in the Chicagoland region, we volunteer regularly at community health fairs, health screenings, and health education events to provide resources and translation support. We strive to bridge the gap between healthcare providers and our community.</p>
+                    <div class="activity-details">
+                        <div class="activity-stat">
+                            <span class="activity-stat-number">800+</span>
+                            <span class="activity-stat-label volunteer-stat-label">Volunteer hours logged last year</span>
+                        </div>
+                        <a href="/contact" class="activity-cta volunteer-cta">Contact our volunteer team</a>
+                    </div>
                 </div>
             </div>
             <div class="activity-card">
                 <div class="activity-media">
-                    <span class="activity-icon">📚</span>
+                    <img src="{{ url_for('static', filename='homepage_pics/chinatown.jpg') }}" alt="Chinatown Public Library">
                 </div>
                 <div class="activity-content">
                     <h3>HEALTH INFORMATION DESK</h3>
                     <p>Stop by the Chinatown Public Library any Tuesday or Thursday afternoon, and you'll find our health information desk staffed by bilingual volunteers. We've helped over 200 families navigate everything from Medicare enrollment to finding a Mandarin-speaking dentist in the area.</p>
+                    <div class="activity-details">
+                        <div class="activity-stat">
+                            <span class="activity-stat-number">200+</span>
+                            <span class="activity-stat-label info-desk-stat-label">Families guided through health resources</span>
+                        </div>
+                        <a href="/health-cards" class="activity-cta info-desk-cta">Browse health resources</a>
+                    </div>
                 </div>
             </div>
             <div class="activity-card">
                 <div class="activity-media">
-                    <span class="activity-icon">🎤</span>
+                    <img src="{{ url_for('static', filename='homepage_pics/Public Events.png') }}" alt="CTHI Invited Speaker Panel">
                 </div>
                 <div class="activity-content">
                     <h3>PUBLIC EVENTS</h3>
-                    <p>From hosting "Health & Heritage" panels featuring local community leaders to organizing mental health awareness workshops, we create spaces where Northwestern students can learn about health disparities and cultural competency in healthcare.</p>
+                    <p>Through hosting public events, we create spaces where Northwestern students can learn about health disparities and cultural competency in healthcare.</p>
+                    <div class="activity-details">
+                        <div class="activity-stat">
+                            <span class="activity-stat-number">12+</span>
+                            <span class="activity-stat-label public-events-stat-label">Community events hosted annually</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="activity-card">
                 <div class="activity-media">
-                    <span class="activity-icon">🥟</span>
+                    <img src="{{ url_for('static', filename='homepage_pics/Food Social.jpg') }}" alt="Volunteers helping community members">
                 </div>
                 <div class="activity-content">
                     <h3>SOCIALS/FOOD BONDING</h3>
-                    <p>Food brings us together! Whether we're selling homemade baozi in the Norris Center to fund our programs, or taking our monthly "Chinatown Food Crawl" to discover the best dim sum spots, we believe that sharing meals builds the strongest communities.</p>
+                    <p>We love food! Every quarter we hold a fundraiser (scallion pancakes, dumplings, tanghulu) to raise money for our initiatives and social events to foster community within our organization. We also take trips down to Chinatown to eat food and explore the community!</p>
+                    <div class="activity-details">
+                        <div class="activity-stat">
+                            <span class="activity-stat-number">20+</span>
+                            <span class="activity-stat-label socials-stat-label">Shared meals and outings each year</span>
+                        </div>
+                        <a href="/team" class="activity-cta socials-cta">Meet the community</a>
+                    </div>
                 </div>
             </div>
         </div>
