@@ -42,6 +42,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 20px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
 /* Navigation */
 .navbar {
     background: var(--white);
@@ -325,6 +331,12 @@ h1, h2, h3, h4, h5, h6 {
 /* Sections */
 .section {
     padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 50px 0;
+    }
 }
 
 .bg-light {
@@ -762,6 +774,207 @@ h1, h2, h3, h4, h5, h6 {
     
     .nav-brand h1 {
         font-size: 1.5rem;
+    }
+    
+    /* Mobile container and spacing improvements */
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section {
+        padding: 50px 0;
+    }
+    
+    .page-header {
+        padding: 60px 0;
+    }
+    
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    /* Mobile button improvements */
+    .btn {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+        width: auto;
+        display: inline-block;
+    }
+    
+    .btn-large {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    /* Mobile hero improvements */
+    .hero {
+        padding: 80px 0;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Mobile section headers */
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    /* Mobile about intro */
+    .about-intro {
+        padding: 0 10px;
+    }
+    
+    .about-intro p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    /* Mobile activity cards - already handled but ensure padding */
+    .activity-card {
+        padding: 1.5rem;
+    }
+    
+    .activity-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .activity-card p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    /* Mobile team note */
+    .team-note {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .team-note p {
+        font-size: 0.95rem;
+    }
+    
+    /* Mobile join team section */
+    .join-team {
+        padding: 2rem 1.5rem;
+        margin: 3rem auto 0;
+    }
+    
+    .join-team h2 {
+        font-size: 1.75rem;
+    }
+    
+    .join-team p {
+        font-size: 1rem;
+    }
+    
+    /* Mobile committee sections */
+    .committee-section {
+        margin: 3rem 0;
+        padding: 2rem 0;
+    }
+    
+    .committee-year {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Mobile member profiles - ensure proper spacing */
+    .member-profiles {
+        gap: 2rem;
+    }
+    
+    .member-profile {
+        padding: 1.5rem;
+    }
+    
+    .member-info .member-name {
+        font-size: 1.4rem;
+    }
+    
+    .member-info .member-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    /* Mobile contact form */
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .contact-form h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Mobile health categories grid */
+    .health-categories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .category-card {
+        padding: 1.5rem;
+    }
+    
+    /* Mobile resource cards */
+    .resource-item {
+        padding: 1.5rem;
+    }
+    
+    .resource-link {
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    /* Mobile CTA content */
+    .cta-content {
+        padding: 0 10px;
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+    }
+    
+    /* Mobile social links */
+    .social-link {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Mobile footer */
+    .footer {
+        padding: 2rem 0 1rem 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
