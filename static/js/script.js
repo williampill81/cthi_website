@@ -203,7 +203,7 @@ const languageContent = {
             volunteerStatLabel: '志工去年累積的服務時數',
             volunteerCta: '聯絡我們的志工團隊',
             infoDeskTitle: '健康資訊服務台',
-            infoDeskText: '每週二或週四下午，您都可以在唐人街公共圖書館找到我們的健康資訊台，由雙語志願者提供服務。我們已經幫助了200多個家庭處理從Medicare註冊到在該地區尋找會說中文的牙醫等各種事務。',
+            infoDeskText: '當我們在唐人街公共圖書館擺攤時，您都可以找到我們的健康資訊服務台，由雙語志願者提供服務。我們已經幫助了200多個家庭處理從Medicare註冊到在該地區尋找會說中文的牙醫等各種事務。',
             infoDeskStatLabel: '已協助的家庭獲得健康資源',
             infoDeskCta: '瀏覽健康資源',
             publicEventsTitle: '公開活動',
