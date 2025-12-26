@@ -584,6 +584,9 @@ function updateHealthCardsPage(lang) {
     
     // Update category card titles by category ID
     const categoryCards = document.querySelectorAll('.category-card');
+    const currentPage = window.location.pathname;
+    const isChinesePage = currentPage.startsWith('/resources-zh');
+    
     categoryCards.forEach((cardElement) => {
         const categoryId = cardElement.getAttribute('data-category-id');
         const h3 = cardElement.querySelector('h3');
@@ -605,15 +608,22 @@ function updateHealthCardsPage(lang) {
         };
         
         const contentKey = categoryMap[categoryId];
-        if (contentKey && content[contentKey]) {
-            if (lang === 'zh') {
-                // On Chinese page, h3 is Chinese name, subtitle is English
-                h3.textContent = content[contentKey];
+        if (contentKey) {
+            if (isChinesePage) {
+                // On Chinese page (/resources-zh), h3 is Chinese, subtitle is English
+                if (content[contentKey] && h3) {
+                    h3.textContent = content[contentKey];
+                }
+                // Subtitle should show English name - get from English content
+                if (subtitle && languageContent.en.content[contentKey]) {
+                    subtitle.textContent = languageContent.en.content[contentKey];
+                }
             } else {
-                // On English page, h3 is English name, subtitle is Chinese
+                // On English page (/health-cards), h3 is English, subtitle is Chinese
                 // Don't update h3, it's already correct from template
-                if (subtitle) {
-                    subtitle.textContent = content[contentKey];
+                // Subtitle should show Chinese name
+                if (subtitle && languageContent.zh.content[contentKey]) {
+                    subtitle.textContent = languageContent.zh.content[contentKey];
                 }
             }
         }
