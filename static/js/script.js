@@ -143,9 +143,14 @@ const languageContent = {
             contactUsBtn: 'Contact Us',
             cancer: 'Cancer Information Cards',
             heart: 'Heart Health Cards',
+            'chronic-illness': 'Chronic Illness Health Cards',
+            dental: 'Dental Health Cards',
+            infections: 'Infections and Virus Health Cards',
+            'mental-health': 'Mental Health Cards',
             preventative: 'Preventative Care Cards',
             respiratory: 'Respiratory Health Cards',
             sexual: 'Sexual Health Cards',
+            'sexual-health': 'Sexual Health Cards',
             resourcesSubtitle: 'Access our comprehensive health education materials in English and Chinese',
             teamSectionTitle: 'Our Team',
             leadershipTeamTitle: 'Leadership Team',
@@ -197,7 +202,7 @@ const languageContent = {
             volunteerText: '與芝加哥唐人街的社區組織以及芝加哥地區的醫學院合作，我們定期在社區健康博覽會、健康篩查和健康教育活動中提供志願服務，提供資源和翻譯支持。我們努力縮小醫療保健提供者與我們社區之間的差距。',
             volunteerStatLabel: '志工去年累積的服務時數',
             volunteerCta: '聯絡我們的志工團隊',
-            infoDeskTitle: '健康資訊台',
+            infoDeskTitle: '健康資訊服務台',
             infoDeskText: '每週二或週四下午，您都可以在唐人街公共圖書館找到我們的健康資訊台，由雙語志願者提供服務。我們已經幫助了200多個家庭處理從Medicare註冊到在該地區尋找會說中文的牙醫等各種事務。',
             infoDeskStatLabel: '已協助的家庭獲得健康資源',
             infoDeskCta: '瀏覽健康資源',
@@ -230,9 +235,14 @@ const languageContent = {
             contactUsBtn: '聯繫我們',
             cancer: '癌症資料卡',
             heart: '心臟健康卡',
+            'chronic-illness': '慢性病健康卡',
+            dental: '牙科健康卡',
+            infections: '感染和病毒健康卡',
+            'mental-health': '心理健康卡',
             preventative: '預防保健卡',
             respiratory: '呼吸系統健康卡',
             sexual: '性健康卡',
+            'sexual-health': '性健康卡',
             resourcesSubtitle: '存取我們全面的中英文健康教育材料',
             teamSectionTitle: '我們的團隊',
             leadershipTeamTitle: '領導團隊',
@@ -572,12 +582,40 @@ function updateHealthCardsPage(lang) {
         ctaBtn.textContent = content.contactUsBtn;
     }
     
-    // Update category card titles
-    const categoryCards = document.querySelectorAll('.category-card h3');
-    categoryCards.forEach((card, index) => {
-        const categories = ['cancer', 'heart', 'preventative', 'respiratory', 'sexual'];
-        if (categories[index] && content[categories[index]]) {
-            card.textContent = content[categories[index]];
+    // Update category card titles by category ID
+    const categoryCards = document.querySelectorAll('.category-card');
+    categoryCards.forEach((cardElement) => {
+        const categoryId = cardElement.getAttribute('data-category-id');
+        const h3 = cardElement.querySelector('h3');
+        const subtitle = cardElement.querySelector('.category-subtitle');
+        
+        if (!categoryId || !h3) return;
+        
+        // Map category IDs to content keys
+        const categoryMap = {
+            'cancer': 'cancer',
+            'cardiovascular': 'heart',
+            'chronic-illness': 'chronic-illness',
+            'dental': 'dental',
+            'infections': 'infections',
+            'mental-health': 'mental-health',
+            'preventative': 'preventative',
+            'respiratory': 'respiratory',
+            'sexual-health': 'sexual-health'
+        };
+        
+        const contentKey = categoryMap[categoryId];
+        if (contentKey && content[contentKey]) {
+            if (lang === 'zh') {
+                // On Chinese page, h3 is Chinese name, subtitle is English
+                h3.textContent = content[contentKey];
+            } else {
+                // On English page, h3 is English name, subtitle is Chinese
+                // Don't update h3, it's already correct from template
+                if (subtitle) {
+                    subtitle.textContent = content[contentKey];
+                }
+            }
         }
     });
 }

@@ -19,7 +19,7 @@
         
         <div class="health-categories-grid">
             {% for category in categories %}
-            <a href="/resources-zh/{{ category.id }}" class="category-card">
+            <a href="/resources-zh/{{ category.id }}" class="category-card" data-category-id="{{ category.id }}">
                 <div class="category-icon">
                     {% if category.id == 'cancer' %}🎗️
                     {% elif category.id == 'cardiovascular' %}❤️
