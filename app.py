@@ -124,6 +124,11 @@ def contact():
     """Contact page"""
     return render_template('contact.html')
 
+@app.route('/physicians')
+def physicians():
+    """Find Chinese-Speaking Physicians page"""
+    return render_template('physicians.html')
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5001))
     debug = os.environ.get('FLASK_ENV') != 'production'

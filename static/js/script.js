@@ -81,6 +81,7 @@ const languageContent = {
             home: 'Home',
             team: 'Meet the Team',
             healthCards: 'Health Education Cards',
+            physicians: 'Find a Physician',
             contact: 'Contact'
         },
         dropdown: {
@@ -138,6 +139,9 @@ const languageContent = {
             healthCardsSubtitle: 'Comprehensive health information resources for the community',
             healthCardsDescription: "We've created these health education materials based on the most common questions we hear from families at our health information desk. Each card is written in simple language, translated by native speakers, and reviewed by healthcare professionals to ensure accuracy.",
             healthCardsNote: 'All resources are available in both English and Chinese. Use the language toggle button to switch languages.',
+            physiciansTitle: 'Find a Chinese-Speaking Physician',
+            physiciansSubtitle: 'Locate Chinese-speaking healthcare providers in the Chicagoland area',
+            physiciansDescription: 'Use the interactive map below to find Chinese-speaking physicians and healthcare providers in the Chicagoland area. Click on any marker to view provider details.',
             needHelpTitle: 'Need Help Finding Resources?',
             needHelpText: 'Visit our health information desk at the Chinatown Public Library or contact us for assistance.',
             contactUsBtn: 'Contact Us',
@@ -173,6 +177,7 @@ const languageContent = {
             home: '首頁',
             team: '認識團隊',
             healthCards: '健康教育卡片',
+            physicians: '尋找醫生',
             contact: '聯絡我們'
         },
         dropdown: {
@@ -230,6 +235,9 @@ const languageContent = {
             healthCardsSubtitle: '為社區提供全面的健康信息資源',
             healthCardsDescription: '我們根據在健康資訊台聽到的家庭最常見問題創建了這些健康教育材料。每張卡片都用簡單的語言編寫，由母語人士翻譯，並由醫療保健專業人士審查以確保準確性。',
             healthCardsNote: '所有資源都有英文和中文版本。使用語言切換按鈕來切換語言。',
+            physiciansTitle: '尋找中文醫生',
+            physiciansSubtitle: '尋找芝加哥地區的中文醫療服務提供者',
+            physiciansDescription: '使用下面的互動地圖尋找芝加哥地區的中文醫生和醫療服務提供者。點擊任何標記以查看提供者詳細信息。',
             needHelpTitle: '需要幫助尋找資源嗎？',
             needHelpText: '請訪問唐人街公共圖書館的健康資訊台或聯繫我們尋求幫助。',
             contactUsBtn: '聯繫我們',
@@ -282,6 +290,8 @@ function updateLanguageContent(lang) {
             link.textContent = content.nav.team;
         } else if (href === '/health-cards') {
             link.textContent = content.nav.healthCards;
+        } else if (href === '/physicians') {
+            link.textContent = content.nav.physicians;
         } else if (href === '/contact') {
             link.textContent = content.nav.contact;
         }
@@ -317,6 +327,8 @@ function updatePageContent(lang) {
         updateHealthCardsPage(lang);
     } else if (currentPage === '/contact') {
         updateContactPage(lang);
+    } else if (currentPage === '/physicians') {
+        updatePhysiciansPage(lang);
     }
 }
 
@@ -690,6 +702,56 @@ function updateContactPage(lang) {
     const submitBtn = document.querySelector('.contact-form .btn');
     if (submitBtn) {
         submitBtn.textContent = lang === 'zh' ? '發送訊息' : 'Send Message';
+    }
+}
+
+// Update physicians page content
+function updatePhysiciansPage(lang) {
+    const content = languageContent[lang].content;
+    
+    // Update page header
+    const pageHeader = document.querySelector('.physicians-page-title');
+    if (pageHeader) {
+        pageHeader.textContent = content.physiciansTitle;
+    }
+    
+    const pageSubtitle = document.querySelector('.physicians-page-subtitle');
+    if (pageSubtitle) {
+        pageSubtitle.textContent = content.physiciansSubtitle;
+    }
+    
+    // Update description
+    const description = document.querySelector('.physicians-description');
+    if (description) {
+        description.textContent = content.physiciansDescription;
+    }
+    
+    // Update map markers if map is already initialized
+    if (typeof window.physicians !== 'undefined' && typeof window.map !== 'undefined' && window.map) {
+        // Clear existing markers
+        window.map.eachLayer(function(layer) {
+            if (layer instanceof L.Marker) {
+                window.map.removeLayer(layer);
+            }
+        });
+        
+        // Re-add markers with updated language
+        window.physicians.forEach(physician => {
+            const isZh = lang === 'zh';
+            
+            const popupContent = `
+                <div style="min-width: 200px;">
+                    <h3 style="margin: 0 0 10px 0; color: #C4003C; font-size: 1.1em;">${isZh ? physician.nameZh : physician.name}</h3>
+                    <p style="margin: 5px 0;"><strong>${isZh ? '專科' : 'Specialty'}:</strong> ${isZh ? physician.specialtyZh : physician.specialty}</p>
+                    <p style="margin: 5px 0;"><strong>${isZh ? '地址' : 'Address'}:</strong> ${physician.address}</p>
+                    <p style="margin: 5px 0;"><strong>${isZh ? '電話' : 'Phone'}:</strong> <a href="tel:${physician.phone}">${physician.phone}</a></p>
+                </div>
+            `;
+            
+            const marker = L.marker([physician.lat, physician.lng])
+                .addTo(window.map)
+                .bindPopup(popupContent);
+        });
     }
 }
 

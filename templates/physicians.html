@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block title %}Find a Chinese-Speaking Physician - Northwestern University Chinatown Health Initiative{% endblock %}
+
+{% block content %}
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+<section class="page-header">
+    <div class="container">
+        <h1 class="physicians-page-title">Find a Chinese-Speaking Physician</h1>
+        <p class="physicians-page-subtitle">Locate Chinese-speaking healthcare providers in the Chicagoland area</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="physicians-content">
+            <div class="physicians-intro">
+                <p class="physicians-description">Use the interactive map below to find Chinese-speaking physicians and healthcare providers in the Chicagoland area. Click on any marker to view provider details.</p>
+            </div>
+            
+            <!-- Map Container -->
+            <div id="physiciansMap" style="height: 600px; width: 100%; border-radius: 15px; margin: 2rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+            
+            <!-- Sample physician data (will be replaced with actual data) -->
+            <div id="physicianData" style="display: none;">
+                <!-- This will be populated with physician data -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+<script>
+// Sample physician data - Replace this with actual data
+window.physicians = [
+    {
+        name: "Dr. Sample Physician 1",
+        nameZh: "示例醫生 1",
+        specialty: "Family Medicine",
+        specialtyZh: "家庭醫學",
+        address: "123 Main St, Chicago, IL 60616",
+        phone: "(312) 555-0100",
+        lat: 41.8781,
+        lng: -87.6298
+    },
+    {
+        name: "Dr. Sample Physician 2",
+        nameZh: "示例醫生 2",
+        specialty: "Internal Medicine",
+        specialtyZh: "內科",
+        address: "456 Oak Ave, Evanston, IL 60201",
+        phone: "(847) 555-0200",
+        lat: 42.0451,
+        lng: -87.6877
+    },
+    {
+        name: "Dr. Sample Physician 3",
+        nameZh: "示例醫生 3",
+        specialty: "Pediatrics",
+        specialtyZh: "兒科",
+        address: "789 Elm St, Skokie, IL 60076",
+        phone: "(847) 555-0300",
+        lat: 42.0334,
+        lng: -87.7334
+    }
+];
+
+// Initialize map centered on Chicago
+window.map = L.map('physiciansMap').setView([41.8781, -87.6298], 10);
+
+// Add OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 19
+}).addTo(map);
+
+// Get current language
+function getCurrentLanguage() {
+    return localStorage.getItem('language') || 'en';
+}
+
+// Add markers for each physician
+physicians.forEach(physician => {
+    const currentLang = getCurrentLanguage();
+    const isZh = currentLang === 'zh';
+    
+    const popupContent = `
+        <div style="min-width: 200px;">
+            <h3 style="margin: 0 0 10px 0; color: #C4003C; font-size: 1.1em;">${isZh ? physician.nameZh : physician.name}</h3>
+            <p style="margin: 5px 0;"><strong>${isZh ? '專科' : 'Specialty'}:</strong> ${isZh ? physician.specialtyZh : physician.specialty}</p>
+            <p style="margin: 5px 0;"><strong>${isZh ? '地址' : 'Address'}:</strong> ${physician.address}</p>
+            <p style="margin: 5px 0;"><strong>${isZh ? '電話' : 'Phone'}:</strong> <a href="tel:${physician.phone}">${physician.phone}</a></p>
+        </div>
+    `;
+    
+    const marker = L.marker([physician.lat, physician.lng])
+        .addTo(map)
+        .bindPopup(popupContent);
+});
+
+// Map markers will be updated by updatePhysiciansPage function in script.js
+</script>
+
+<style>
+.physicians-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.physicians-intro {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.physicians-intro p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    #physiciansMap {
+        height: 400px !important;
+        margin: 1.5rem 0 !important;
+    }
+    
+    .physicians-intro p {
+        font-size: 1rem;
+    }
+}
+</style>
+{% endblock %}
+
