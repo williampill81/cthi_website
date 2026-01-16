@@ -1072,7 +1072,33 @@ h1, h2, h3, h4, h5, h6 {
     .member-photo img.anna-photo,
     .member-photo img.johnny-photo,
     .member-photo img.william-photo,
-    .member-photo img.lindsay-photo {
+    .member-photo img.lindsay-photo,
+    .member-photo img.megan-photo,
+    .member-photo img.audrey-photo,
+    .member-photo img.jessica-photo,
+    .member-photo img.allen-photo,
+    .member-photo img.haile-photo,
+    .member-photo img.eric-photo,
+    .member-photo img.adam-photo,
+    .member-photo img.andrew-photo,
+    .member-photo img.angelina-photo,
+    .member-photo img.august-photo,
+    .member-photo img.elise-photo,
+    .member-photo img.emma-photo,
+    .member-photo img.jenny-photo,
+    .member-photo img.krystal-photo,
+    .member-photo img.liana-photo,
+    .member-photo img.patricio-photo,
+    .member-photo img.sabrina-photo,
+    .member-photo img.alicia-photo,
+    .member-photo img.grace-photo,
+    .member-photo img.kimberly-photo,
+    .member-photo img.priscilla-photo,
+    .member-photo img.vivian-photo,
+    .member-photo img.will-wu-photo,
+    .member-photo img.yagmur-photo,
+    .member-photo img.lydia-photo,
+    .member-photo img.enya-photo {
         transform: none !important;
         object-position: center center !important;
     }
@@ -1585,6 +1611,141 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.7) translateX(5%) !important;
     object-fit: cover !important;
     object-position: center center !important;
+}
+
+.member-photo img.megan-photo {
+    transform: scale(1.3);
+    object-position: center center;
+}
+
+.member-photo img.audrey-photo {
+    transform: scale(1.3);
+    object-position: center center;
+}
+
+/* Executive Board photos */
+.member-photo img.jessica-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.allen-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.haile-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.eric-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+/* Clinical Committee photos */
+.member-photo img.adam-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.andrew-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.angelina-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.august-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.elise-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.emma-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.jenny-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.krystal-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.liana-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.patricio-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.sabrina-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+/* Health Education Committee photos */
+.member-photo img.alicia-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.grace-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.kimberly-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.priscilla-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.vivian-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+/* Events Committee photos */
+.member-photo img.will-wu-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.yagmur-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+/* Finance Committee photos */
+.member-photo img.lydia-photo {
+    transform: scale(1.2);
+    object-position: center center;
+}
+
+.member-photo img.enya-photo {
+    transform: scale(1.2);
+    object-position: center center;
 }
 
 .member-photo .member-photo-placeholder {
