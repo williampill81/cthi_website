@@ -235,7 +235,7 @@ const languageContent = {
             healthCardsSubtitle: '為社區提供全面的健康信息資源',
             healthCardsDescription: '我們根據在健康資訊台聽到的家庭最常見問題創建了這些健康教育材料。每張卡片都用簡單的語言編寫，由母語人士翻譯，並由醫療保健專業人士審查以確保準確性。',
             healthCardsNote: '所有資源都有英文和中文版本。使用語言切換按鈕來切換語言。',
-            physiciansTitle: '尋找中文醫生',
+            physiciansTitle: '尋找會講國語/廣東話的醫生',
             physiciansSubtitle: '尋找芝加哥地區的中文醫療服務提供者',
             physiciansDescription: '使用下面的互動地圖尋找芝加哥地區的中文醫生和醫療服務提供者。點擊任何標記以查看提供者詳細信息。',
             needHelpTitle: '需要幫助尋找資源嗎？',
