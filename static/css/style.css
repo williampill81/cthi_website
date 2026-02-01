@@ -1076,6 +1076,7 @@ h1, h2, h3, h4, h5, h6 {
     .member-photo img.megan-photo,
     .member-photo img.audrey-photo,
     .member-photo img.jessica-photo,
+    .member-photo img.chau-photo,
     .member-photo img.allen-photo,
     .member-photo img.haile-photo,
     .member-photo img.eric-photo,
@@ -1625,7 +1626,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Executive Board photos */
 .member-photo img.jessica-photo {
-    transform: scale(1.2);
+    transform: scale(1.8);
+    object-position: center center;
+}
+
+.member-photo img.chau-photo {
+    transform: scale(1.8);
     object-position: center center;
 }
 
