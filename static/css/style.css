@@ -1636,8 +1636,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .member-photo img.allen-photo {
-    transform: scale(1.7);
-    object-position: 80% 30%;
+    transform: scale(1.15);
+    object-position: center center;
 }
 
 .member-photo img.haile-photo {
