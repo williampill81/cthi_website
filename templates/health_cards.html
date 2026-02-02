@@ -21,16 +21,7 @@
             {% for category in categories %}
             <a href="/health-cards/{{ category.id }}" class="category-card" data-category-id="{{ category.id }}">
                 <div class="category-icon">
-                    {% if category.id == 'cancer' %}🎗️
-                    {% elif category.id == 'cardiovascular' %}❤️
-                    {% elif category.id == 'chronic-illness' %}🩺
-                    {% elif category.id == 'dental' %}🦷
-                    {% elif category.id == 'infections' %}🦠
-                    {% elif category.id == 'mental-health' %}🧠
-                    {% elif category.id == 'preventative' %}✅
-                    {% elif category.id == 'respiratory' %}🫁
-                    {% elif category.id == 'sexual-health' %}💊
-                    {% endif %}
+                    <img src="{{ url_for('static', filename='icons/' ~ category.icon) }}" alt="" class="category-icon-img">
                 </div>
                 <h3>{{ category.name }}</h3>
                 <p class="category-subtitle">{{ category.name_zh }}</p>

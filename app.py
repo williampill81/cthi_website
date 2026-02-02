@@ -12,17 +12,17 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-secret-key-here-ch
 # Resource directory
 RESOURCE_ROOT = Path(app.root_path) / 'static' / 'resources'
 
-# Health card categories
+# Health card categories (icon filenames from static/icons/)
 HEALTH_CATEGORIES = [
-    {'id': 'cancer', 'name': 'Cancer', 'name_zh': '癌症資料卡'},
-    {'id': 'cardiovascular', 'name': 'Cardiovascular Health', 'name_zh': '心臟健康卡'},
-    {'id': 'chronic-illness', 'name': 'Chronic Illness', 'name_zh': '慢性病健康卡'},
-    {'id': 'dental', 'name': 'Dental Health', 'name_zh': '牙科健康卡'},
-    {'id': 'infections', 'name': 'Infections and Virus', 'name_zh': '感染和病毒健康卡'},
-    {'id': 'mental-health', 'name': 'Mental Health', 'name_zh': '心理健康卡'},
-    {'id': 'preventative', 'name': 'Preventative Care', 'name_zh': '預防保健卡'},
-    {'id': 'respiratory', 'name': 'Respiratory Health', 'name_zh': '呼吸系統健康卡'},
-    {'id': 'sexual-health', 'name': 'Sexual Health', 'name_zh': '性健康卡'},
+    {'id': 'cancer', 'name': 'Cancer', 'name_zh': '癌症資料卡', 'icon': 'Cancer.png'},
+    {'id': 'cardiovascular', 'name': 'Cardiovascular Health', 'name_zh': '心臟健康卡', 'icon': 'Heart.png'},
+    {'id': 'chronic-illness', 'name': 'Chronic Illness', 'name_zh': '慢性病健康卡', 'icon': 'Chronic.png'},
+    {'id': 'dental', 'name': 'Dental Health', 'name_zh': '牙科健康卡', 'icon': 'Dental.png'},
+    {'id': 'infections', 'name': 'Infections and Virus', 'name_zh': '感染和病毒健康卡', 'icon': 'Disease.png'},
+    {'id': 'mental-health', 'name': 'Mental Health', 'name_zh': '心理健康卡', 'icon': 'Mental.png'},
+    {'id': 'preventative', 'name': 'Preventative Care', 'name_zh': '預防保健卡', 'icon': 'Preventative.png'},
+    {'id': 'respiratory', 'name': 'Respiratory Health', 'name_zh': '呼吸系統健康卡', 'icon': 'Respiratory.png'},
+    {'id': 'sexual-health', 'name': 'Sexual Health', 'name_zh': '性健康卡', 'icon': 'Reproductive.png'},
 ]
 
 
