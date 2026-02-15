@@ -1684,7 +1684,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .member-photo img.emma-photo {
     transform: scale(1.5);
-    object-position: center center;
+    object-position: center top;
 }
 
 .member-photo img.jenny-photo {
