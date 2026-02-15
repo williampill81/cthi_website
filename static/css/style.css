@@ -1704,7 +1704,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .member-photo img.patricio-photo {
     transform: scale(1.2);
-    object-position: center center;
+    object-position: center top;
 }
 
 .member-photo img.sabrina-photo {
